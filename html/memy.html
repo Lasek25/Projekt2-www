@@ -1,0 +1,38 @@
+<script>
+    $(document).ready(function() {
+        $ ('a').click(function() {
+            var thisA=$(this);
+            if(thisA.attr('href')!=='memy.html') {
+                $('#slajder_m').fadeOut(500, function () {
+                    $('#slajder_m').load(thisA.attr('href'), function () {
+                        $('#slajder_m').fadeIn(500);
+                    });
+                });
+                return false;
+            }
+        });
+    });
+</script>
+<div class="container-fluid tlo p-4 mb-3">
+    <section >
+        <h1>MEMY</h1>
+        <h2>Wybierz jedną z dostępnych ras z menu</h2>
+    </section>
+    <nav class="navbar-expand bg-light czcionka shadow-lg">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="mops.html">Mops</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="samojed.html">Samojed</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="shiba.html">Shiba inu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="corgi.html">Welsh Corgi</a>
+            </li>
+        </ul>
+    </nav><br>
+    <div id="slajder_m"></div>
+</div>

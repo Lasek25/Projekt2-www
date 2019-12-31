@@ -1,0 +1,52 @@
+header{
+    background-image: url("../images/tlo.jpg");
+    background-size: 3.1%;
+}
+.cien{
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: Arial ,"Times New Roman", sans-serif;
+    color: white;
+}
+.czcionka{
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 17px;
+}
+.tlo{
+    background-color: lightgray;
+}
+.ramka{
+    border-top: white solid 4px;
+    border-right: white solid 4px;
+}
+.tlo li a:hover {
+    background-color: #d9230f;
+    color: white;
+}
+.siwa_ramka{
+    border: solid gray 1px;
+    border-radius: 3px;
+}
+#info{
+    font-size: 15px;
+}
+/*#slajder{*/
+/*    width: 60%;*/
+/*    background-color: #0b4152;*/
+/*    border: 1px solid #000000;*/
+/*    margin: auto;*/
+/*    position: relative;*/
+/*}*/
+/*#slajder #slades{*/
+/*    width: 100%;*/
+/*    !*background-color: #c4c240;*!*/
+/*}*/
+#slajder #slades .slade{
+    display: none;
+}
+#slajder #slades .active{
+    display: block;
+}
+.navi{
+    cursor: pointer;
+}
+

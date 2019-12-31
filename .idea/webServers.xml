@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="17436f7b-a66c-4b30-9cec-7ffa76d066ab" name="uczelnia" url="http://orfi.uwm.edu.pl">
+        <fileTransfer host="orfi.uwm.edu.pl" port="22" rootFolder="/~s145898" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

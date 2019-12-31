@@ -1,0 +1,119 @@
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#zdjecie").hide();
+        $("#info").click(function(){
+            $("#zdjecie").slideToggle("slow");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        if($('#tak').prop('checked'))
+            $('#dodatkowe').show();
+        else
+            $('#dodatkowe').hide();
+        $(this).change(function () {
+            if($('#tak').prop('checked'))
+                $('#dodatkowe').show();
+            else
+                $('#dodatkowe').hide();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+<div class="col-lg-2 d-lg-block d-none float-lg-right container-fluid">
+    <div id="info" class="btn-primary btn-sm text-center font-weight-bold">Kliknij, aby zobaczyć pieseła wsparcia</div><br>
+    <a href="#" data-toggle="tooltip" data-placement="left" title="Wow wow wow!"><img src="../images/tlo.jpg" class="img-fluid" alt="Pieseł" id="zdjecie"/></a>
+</div>
+<form class="p-4 pl-md-5 pr-md-5 col-lg-8 mb-3 container-fluid tlo" action="#" method="get">
+    <h1>FORMULARZ KONTAKTOWY</h1>
+    <h2>To właśnie miejsce, w którym możesz ocenić moją pracę lub zasugerować jakieś zmiany, zapraszam do kontaktu!</h2><br>
+    <div class="row was-validated">
+        <div class="form-group col">
+            <label for="imie">Imię:</label>
+            <input type="text" class="form-control shadow" pattern="^[A-Z][a-z]+" placeholder="Wpisz imię" id="imie" name="imie" required/>
+            <div class="valid-feedback">Wpisano poprawne dane</div>
+            <div class="invalid-feedback">Imię musi zaczynać się od wielkiej litery</div>
+        </div>
+        <div class="form-group col">
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" class="form-control shadow" pattern="^[A-Z][a-z]+" placeholder="Wpisz nazwisko" id="nazwisko" name="nazwisko" required/>
+            <div class="valid-feedback">Wpisano poprawne dane</div>
+            <div class="invalid-feedback">Nazwisko musi zaczynać się od wielkiej litery</div>
+        </div>
+    </div>
+    <div class="row was-validated">
+        <div class="form-group col">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control shadow" pattern="^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{1,})*\.([a-zA-Z]{2,}){1}$" placeholder="Wpisz email" id="email" name="email" required/>
+            <div class="valid-feedback">Wpisano poprawne dane</div>
+            <div class="invalid-feedback">Wpisz poprawny adres e-mail</div>
+        </div>
+        <div class="form-group col">
+            <label for="telefon">Telefon:</label>
+            <input type="tel" class="form-control shadow" pattern="^[0-9]{9}" placeholder="Wpisz nr telefonu" id="telefon" name="telefon" required/>
+            <div class="valid-feedback">Wpisano poprawne dane</div>
+            <div class="invalid-feedback">Wpisz poprawny numer telefonu</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check-inline form-group col" id="plec">
+            <label class="col" for="plec">Płeć:</label>
+            <div class="custom-control custom-radio col">
+                <input type="radio" id="kobieta" name="plec" class="custom-control-input">
+                <label class="custom-control-label text-dark" for="kobieta">kobieta</label>
+            </div>
+            <div class="custom-control custom-radio col">
+                <input type="radio" id="mezczyzna" name="plec" class="custom-control-input">
+                <label class="custom-control-label text-dark" for="mezczyzna">mężczyzna</label>
+            </div>
+        </div>
+        <div class="form-check-inline form-group col" id="zwierze">
+            <label class="col" for="zwierze">Zaznacz jeśli masz jakieś zwierzę:</label>
+            <div class="custom-control custom-switch col">
+<!--                <input type="checkbox" id="tak" class="custom-control-input" onclick=document.getElementById('dodatkowe').style.visibility='visible'>-->
+                <input type="checkbox" id="tak" class="custom-control-input">
+                <label class="custom-control-label text-dark" for="tak"></label>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="dodatkowe">
+        <div class="form-group col">
+            <label for="imie_z">Imię pupila:</label>
+            <input type="text" class="form-control shadow" placeholder="Wpisz imię" id="imie_z" name="imie_z"/>
+        </div>
+        <div class="form-group col">
+            <label for="pupil">Wstaw zdjęcię swojego pupila:</label>
+            <input type="file" class="form-control-file bg-white siwa_ramka shadow" id="pupil">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col">
+            <label for="temat">Temat:</label>
+            <select class="custom-select shadow" id="temat">
+                <option selected disabled>Wybierz temat</option>
+                <option value="1">Memy</option>
+                <option value="2">Opinia</option>
+                <option value="3">Inne</option>
+            </select>
+        </div>
+        <div class="form-group col">
+            <label for="wiadomosc">Treść:</label>
+            <textarea class="form-control shadow" rows="8" id="wiadomosc" placeholder="Wpisz tutaj Twoją wiadomość"></textarea>
+        </div>
+    </div>
+    <div class="form-check-inline col">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="warunek">
+            <label class="custom-control-label text-dark" for="warunek">Chcę zapisać się na newsletter i otrzymywać pisekowe memy!</label>
+        </div>
+    </div><br>
+    <br><div class="row col">
+        <button type="submit" class="btn btn-primary btn-lg shadow">Wyślij formularz</button>
+    </div>
+</form>

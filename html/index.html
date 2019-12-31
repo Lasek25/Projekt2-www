@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Pieskowa Strona Świata</title>
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../css/bootstrap2.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="../js/jquery.zoomooz.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $ ('a').click(function() {
+            var thisA=$(this);
+            $('*').removeClass('active');
+            $(this).addClass('active');
+            $('#strona').fadeOut(0, function () {
+                $('#strona').load(thisA.attr('href'), function () {
+                    $('#strona').fadeIn(0);
+                });
+            });
+            return false;
+        });
+    });
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid pt-4 pr-5 pl-5">
+    <div class="row text-center pb-3">
+        <div class="col-md-12 text-center text-white">
+            <header class="display-1 p-3 border cien">Pieskowa Strona Świata</header>
+            <ul class="nav nav-fill nav-pills tlo">
+                <li class="nav-item ramka"><a class="nav-link active" data-toggle="pill" href="glowna.html"><h3 class="font-weight-bold">Strona główna</h3></a></li>
+                <li class="nav-item ramka"><a class="nav-link" data-toggle="pill" href="rasy.html"><h3 class="font-weight-bold">Rasy</h3></a></li>
+                <li class="nav-item ramka"><a class="nav-link" data-toggle="pill" href="memy.html"><h3 class="font-weight-bold">Memy</h3></a></li>
+<!--                <li class="nav-item ramka"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="memy.html"><h3 class="font-weight-bold">Memy</h3></a>-->
+<!--                    <div class="dropdown-menu">-->
+<!--                        <a class="dropdown-item" href="mops.html">Mops</a>-->
+<!--                        <a class="dropdown-item" href="samojed.html">Samojed</a>-->
+<!--                        <a class="dropdown-item" href="shiba.html">Shiba inu</a>-->
+<!--                        <a class="dropdown-item" href="corgi.html">Welsh Corgi</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+                <li class="nav-item ramka"><a class="nav-link" data-toggle="pill" href="multimedia.html"><h3 class="font-weight-bold">Multimedia</h3></a></li>
+<!--                <li class="nav-item ramka"><a class="nav-link" data-toggle="pill" href="o_autorze.html"><h3 class="font-weight-bold">O autorze</h3></a></li>-->
+                <li class="nav-item ramka border-right-0"><a class="nav-link" data-toggle="pill" href="kontakt.html"><h3 class="font-weight-bold">Kontakt</h3></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="strona">
+        <div class="tlo p-4 mb-3 container-fluid">
+            <h1>STRONA GŁÓWNA</h1>
+            <h2>Pieskie życie - pieskie sprawy. Na stronie znajdziesz najlepsze psie memy, filmy, a także informacje o rasach
+                psów, które w nich występują.</h2><br>
+            <div class="row container-fluid">
+                <div class="bg-light p-2 shadow-lg col-xl-9">
+                    <h3>Doggo Ipsum</h3><br>
+                    <p class="czcionka">
+                        Doggo ipsum very good spot wrinkler. Extremely cuuuuuute shooberino porgo bork extremely cuuuuuute wow very biscit,
+                        smol borking doggo with a long snoot for pats tungg fluffer. Doing me a frighten porgo he made many woofs many pats
+                        ur givin me a spook borkf super chub doggorino, doing me a frighten stop it fren he made many woofs much ruin diet
+                        smol I am bekom fat. doge vvv shooberino. Aqua doggo dat tungg tho heckin angery woofer doggo, what a nice floof.
+                    </p>
+                    <p class="czcionka">
+                        Stop it fren pats bork shooberino wrinkler heckin you are doin me a concern, tungg most angery pupper I have ever
+                        seen smol boofers heckin good boys and girls.  Heckin good boys and girls heckin shoob clouds pats, super chub
+                        pupperino. Heckin good boys and girls adorable doggo super chub extremely cuuuuuute, bork. Adorable doggo shoober
+                        long woofer, borkf. Doing me a frighten extremely cuuuuuute boof you are doing me the shock, shooberino.
+                    </p>
+                </div>
+                <img src="../images/luka.jpg" alt="border collie" class="col-xl-3 d-xl-block d-none img-fluid zoomTarget">
+            </div>
+            <p class="float-right col-xl-3 d-xl-block d-none">kliknij obrazek, aby go powiększyć</p>
+
+        </div>
+
+    </div>
+    <footer class="tlo p-3 mb-4">
+        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br>
+        <a class="mediaS" href="https://www.facebook.com/"><img src="../images/fb.png" alt="facebook" title="https://www.facebook.pl/" class="pr-1"/></a>
+        <a class="mediaS" href="https://www.youtube.com/"><img src="../images/yt.png" alt="youtube" title="https://www.youtube.com/" class="pr-1"/></a>
+        <a class="mediaS" href="https://www.instagram.com/"><img src="../images/instagram.png" alt="instagram" title="https://www.instagram.com/"/></a>
+    </footer>
+</div>
+</body>
+</html>
